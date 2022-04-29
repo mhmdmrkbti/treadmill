@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Manual Configuration -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <!-- SEO Configuration -->
+    <meta
+      name="description"
+      content="Rich and authoritative source of information from the world of bodybuilding"
+    />
+    <meta name="robots" content="NOINDEX,NOFOLLOW" />
+    <title>Reliable Source In The World Of Bodybuilding | LegendBody</title>
+    <!-- Design Configuration -->
+    <link
+      rel="icon"
+      sizes="16x16 24x24 32x32 48x48 64x64 96x96 144x144 192x192 196x196 256x256 384x384 512x512"
+      type="image/x-icon"
+      href="favicon.ico"
+    />
+    <meta
+      name="theme-color"
+      media="(prefers-color-scheme: dark)"
+      content="#1b1b1b"
+    />
+    <meta
+      name="theme-color"
+      media="(prefers-color-scheme: light)"
+      content="#eeeeee"
+    />
+    <!-- Page Configuration -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=block"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style/main-t.css" />
+    <script defer src="./js/TreadmillHandler-t.js"></script>
+    <script defer src="./js/script-t.js"></script>
+  </head>
+  <body class="primary-bg--dark">
+    <header class="treadmill-header treadmill-header--dark-shadow">
+      <h1 class="primary-color--dark">Treadmill</h1>
+    </header>
+    <main class="treadmill-body">
+      <section class="incline-tools-wrapper">
+        <button
+          id="incline-up"
+          class="tool-button tool-button--hover secondary-bg--dark primary-color--dark tool-button--dark-shadow"
+        >
+          Incline Up
+        </button>
+        <button
+          id="incline-down"
+          class="tool-button tool-button--hover secondary-bg--dark primary-color--dark tool-button--dark-shadow"
+        >
+          Incline Down
+        </button>
+      </section>
+      <section class="speed-tools-wrapper">
+        <button
+          id="speed-up"
+          class="tool-button tool-button--hover secondary-bg--dark primary-color--dark tool-button--dark-shadow"
+        >
+          Speed Up
+        </button>
+        <button
+          id="speed-down"
+          class="tool-button tool-button--hover secondary-bg--dark primary-color--dark tool-button--dark-shadow"
+        >
+          Speed Down
+        </button>
+      </section>
+      <section class="monitor-wrapper light-bg--dark">
+        <div class="control-body">
+          <div class="control-body__path">
+            <div
+              class="monitor-button dark-color--dark monitor-button--dark-shadow"
+            >
+              <span class="monitor-button__title">Incline</span>
+              <img
+                class="monitor-button__icon"
+                src="./assets/icons/angle.svg"
+                alt=""
+              />
+              <p class="monitor-button__message">
+                <span
+                  class="monitor-button__message--value"
+                  id="treadmill-incline-value"
+                  >0</span
+                >
+                <span class="monitor-button__message--unit">°</span>
+              </p>
+            </div>
+            <div
+              class="monitor-button dark-color--dark monitor-button--dark-shadow"
+            >
+              <span class="monitor-button__title">Distance</span>
+              <img
+                class="monitor-button__icon"
+                src="./assets/icons/distance.svg"
+                alt=""
+              />
+              <p class="monitor-button__message">
+                <span
+                  class="monitor-button__message--value"
+                  id="treadmill-distance-value"
+                  >0</span
+                >
+                <span
+                  class="monitor-button__message--unit monitor-button__message--small"
+                  >m</span
+                >
+              </p>
+            </div>
+          </div>
+          <div class="control-body__calories">
+            <img src="./assets/icons/flame.svg" alt="" />
+            <p class="control-body__calories-message dark-color--dark">
+              <span id="treadmill-calories-value">0</span> Calories <br />
+              Burn Out
+            </p>
+          </div>
+          <div class="control-body__heat">
+            <div
+              class="monitor-button dark-color--dark monitor-button--dark-shadow"
+            >
+              <span class="monitor-button__title">Speed</span>
+              <img
+                class="monitor-button__icon"
+                src="./assets/icons/speed.svg"
+                alt=""
+              />
+              <p class="monitor-button__message">
+                <span
+                  id="treadmill-speed-value"
+                  class="monitor-button__message--value"
+                  >0</span
+                >
+                <span
+                  class="monitor-button__message--unit monitor-button__message--small"
+                  >km/h</span
+                >
+              </p>
+            </div>
+            <div
+              class="monitor-button dark-color--dark monitor-button--dark-shadow"
+            >
+              <span class="monitor-button__title">Time</span>
+              <img
+                class="monitor-button__icon"
+                src="./assets/icons/time.svg"
+                alt=""
+              />
+              <p class="monitor-button__message">
+                <span
+                  class="monitor-button__message--value"
+                  id="treadmill-time-value"
+                  >00:00:00</span
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="treadmill-handler-wrapper">
+        <button
+          id="reset"
+          class="tool-button tool-button--hover secondary-bg--dark primary-color--dark tool-button--dark-shadow"
+        >
+          Reset
+        </button>
+        <button
+          id="start-stop"
+          class="tool-button tool-button--hover secondary-bg--dark primary-color--dark tool-button--dark-shadow"
+        >
+          Start/Stop
+        </button>
+      </section>
+    </main>
+  </body>
+</html>

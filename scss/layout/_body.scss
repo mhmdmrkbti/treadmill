@@ -1,0 +1,83 @@
+body {
+  @include flex(column, flex-start, center);
+}
+.treadmill-body {
+  width: 100%;
+  flex-grow: 1;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+.incline-tools-wrapper {
+  width: 100%;
+  order: 4;
+  @include flex(column, space-evenly, center);
+  padding: calc(4rem + 2vw) 0;
+  & > * + * {
+    margin-top: calc(4rem + 2vw);
+  }
+  @include breakpoint(575.99px) {
+    width: 50%;
+    order: 3;
+  }
+  @include breakpoint(767.99px) {
+    order: 2;
+  }
+  @include breakpoint(991.99px) {
+    width: 20%;
+    order: 1;
+  }
+}
+.speed-tools-wrapper {
+  width: 100%;
+  order: 3;
+  @include flex(column, space-evenly, center);
+  padding: calc(4rem + 2vw) 0;
+  & > * + * {
+    margin-top: calc(4rem + 2vw);
+  }
+  @include breakpoint(575.99px) {
+    width: 50%;
+    order: 3;
+  }
+  @include breakpoint(767.99px) {
+    order: 2;
+  }
+  @include breakpoint(991.99px) {
+    width: 20%;
+    order: 3;
+  }
+}
+.monitor-wrapper {
+  width: 100%;
+  order: 1;
+  @include flex(column, flex-start, center);
+  @include breakpoint(991.99px) {
+    order: 2;
+    width: 60%;
+    border-radius: 0 0 calc(1rem + 0.5vw) calc(1rem + 0.5vw);
+  }
+}
+.treadmill-handler-wrapper {
+  width: 100%;
+  order: 2;
+  @include flex(column, space-evenly, center);
+  padding: calc(4rem + 2vw) 0;
+  & > * + * {
+    margin-top: calc(4rem + 2vw);
+  }
+  @include breakpoint(575.99px) {
+    @include flex(row, space-evenly, center);
+    padding: calc(2rem + 1vw) 0;
+    & > * + * {
+      margin-top: 0;
+    }
+  }
+  @include breakpoint(767.99px) {
+    order: 3;
+  }
+  @include breakpoint(991.99px) {
+    order: 4;
+  }
+}

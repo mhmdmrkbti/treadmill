@@ -1,0 +1,55 @@
+// -----------------------------------------------------------------------------
+// When having several themes, this file contains everything related to the
+// default one.
+// -----------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Background color
+//------------------------------------------------------------------------------
+.primary-bg--dark {
+  background-color: palette(black, 400);
+}
+.secondary-bg--dark {
+  background-color: palette(black, 500);
+}
+.tertiary-bg--dark {
+  background-color: palette(black, 700);
+}
+.light-bg--dark {
+  background-color: palette(white, 300);
+}
+
+//------------------------------------------------------------------------------
+// Foreground color
+//------------------------------------------------------------------------------
+.primary-color--dark {
+  color: palette(white, 300);
+}
+.secondary-color--dark {
+  color: palette(white, 500);
+}
+.dark-color--dark {
+  color: palette(black, 500);
+}
+//------------------------------------------------------------------------------
+// Box-Shadow
+//------------------------------------------------------------------------------
+.treadmill-header--dark-shadow {
+  box-shadow: 0px 4px 6px palette(black, 700);
+  @include breakpoint(1499.99px) {
+    box-shadow: 0px 8px 10px palette(black, 700);
+  }
+}
+.tool-button--dark-shadow {
+  box-shadow: 4px 4px 6px palette(black, 700), -2px -2px 4px palette(white, 900);
+  &:hover,
+  &:focus {
+    box-shadow: 4px 4px 6px palette(black, 700),
+      -2px -2px 4px palette(white, 900), inset 4px 4px 6px palette(black, 700),
+      inset -2px -2px 4px palette(white, 900);
+  }
+}
+
+.monitor-button--dark-shadow {
+  box-shadow: 4px 4px 6px palette(white, 500), -2px -2px 4px palette(white, 100);
+}

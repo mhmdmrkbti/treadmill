@@ -1,0 +1,21 @@
+/**
+ * Basic typography style for copy text
+ */
+body {
+  //   https://web.dev/learn/design/typography/
+  //   https://css-tricks.com/snippets/css/using-font-face-in-css/#article-header-id-12
+  font-family: $openSans;
+  //   https://developer.chrome.com/blog/font-display/
+  font-display: block;
+  //   https://caniuse.com/?search=text-rendering
+  text-rendering: auto;
+  line-height: 1.5;
+}
+
+/**
+ * stop text from getting too wide by limiting how wide the container can be
+ */
+article {
+  // max-inline-size: 66ch;
+  line-height: 1.65;
+}

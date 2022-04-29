@@ -1,0 +1,80 @@
+// -----------------------------------------------------------------------------
+// This file contains CSS helper classes.
+// -----------------------------------------------------------------------------
+
+%full-background-image {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+/**
+ * Clear inner floats
+ */
+.clearfix:before,
+.clearfix:after {
+  content: ' ';
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  zoom: 1;
+}
+
+/**
+ * Hide element while making it readable for screen readers
+ * Shamelessly borrowed from HTML5Boilerplate & Bootstrap:
+ * https://github.com/h5bp/html5-boilerplate/blob/a2356c1cbfc560c2b140d4ab507c2a4fdc9f58f0/src/css/main.css#L119
+ * https://github.com/twbs/bootstrap/blob/cf5d94f6d5685c371dcb157af74a3c6b14ec8d8e/scss/mixins/_screen-reader.scss
+ * https://gist.github.com/ffoodd/000b59f431e3e64e4ce1a24d5bb36034
+ * https://kittygiraudel.com/2016/10/13/css-hide-and-seek/
+ * https://www.a11yproject.com/posts/how-to-hide-content/
+ */
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important; /* 2 */
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important; /* 3 */
+}
+.sr-only-focusable:focus,
+.sr-only-focusable:active {
+  clip: auto !important;
+  -webkit-clip-path: none !important;
+  clip-path: none !important;
+  height: auto !important;
+  margin: auto !important;
+  overflow: visible !important;
+  width: auto !important;
+  white-space: normal !important;
+}
+
+.unable-selection {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.d-none {
+  display: none;
+}
+
+// https://dev.to/nicm42/fading-in-and-fading-out-with-css-transitions-3lc1
+.hide {
+  visibility: hidden;
+  opacity: 0;
+}
+.show {
+  visibility: visible;
+  opacity: 1;
+}

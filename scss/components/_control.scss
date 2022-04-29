@@ -1,0 +1,64 @@
+.control-body {
+  width: 100%;
+  flex-grow: 1;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  overflow: auto;
+  @include element(path) {
+    width: 100%;
+    order: 3;
+    @include flex(column, space-evenly, center);
+    padding: calc(3rem + 1.5vw) 0;
+    & > * + * {
+      margin-top: calc(3rem + 1.5vw);
+    }
+    @include breakpoint(575.99px) {
+      width: 50%;
+      order: 2;
+    }
+    @include breakpoint(767.99px) {
+      width: 25%;
+      order: 1;
+    }
+  }
+  @include element(calories) {
+    width: 100%;
+    order: 1;
+    @include flex(column, center, center);
+    @include breakpoint(767.99px) {
+      width: 50%;
+      order: 2;
+    }
+    img {
+      width: calc(8rem + 4vw);
+      height: calc(8rem + 4vw);
+    }
+    &-message {
+      font-size: calc(2rem + 0.5vw);
+      font-weight: 400;
+      text-align: center;
+      span {
+        font-size: calc(3rem + 0.5vw);
+      }
+    }
+  }
+  @include element(heat) {
+    width: 100%;
+    order: 2;
+    @include flex(column, space-evenly, center);
+    padding: calc(3rem + 1.5vw) 0;
+    & > * + * {
+      margin-top: calc(3rem + 1.5vw);
+    }
+    @include breakpoint(575.99px) {
+      width: 50%;
+      order: 2;
+    }
+    @include breakpoint(767.99px) {
+      width: 25%;
+      order: 3;
+    }
+  }
+}
